@@ -38,7 +38,8 @@ y = data['Sentiment']
 
 # Train Logistic Regression Model
 st.write("Training model...")
-log_model = LogisticRegression()
+#log_model = LogisticRegression()
+log_model = LogisticRegression(max_iter=200, solver='liblinear')
 log_model.fit(X, y)
 
 st.title("IMDB Movie Review Sentiment Predictor")
